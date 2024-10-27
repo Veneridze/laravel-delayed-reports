@@ -63,7 +63,7 @@ class ReportData extends Form
             $this->docs = MediaData::collect($report->getMedia('result'));
             $this->label = $report->type::label();
             $this->filetype = $report->type::filetype();
-            $this->description = $report->type::description();
+            $this->description = $report->type::description($report->payload);
         }
     }
     public static string $model = Report::class;
@@ -143,7 +143,7 @@ class ReportData extends Form
                     [
                         "type" => "hidden",
                         "key" => "type",
-                        "initvalue" => basename($type)
+                        "initvalue" => strtolower(basename((new \ReflectionClass($type)->getShortName())))
                     ]
                 ]
             ]
