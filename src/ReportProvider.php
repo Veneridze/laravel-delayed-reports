@@ -3,9 +3,9 @@ namespace Veneridze\LaravelDelayedReport;
 
 
 use Spatie\LaravelPackageTools\Package;
-use App\Console\Commands\CreateReportCommand;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
+use Veneridze\LaravelDelayedReport\Commands\CreateReportCommand;
 
 class ReportProvider extends PackageServiceProvider
 {

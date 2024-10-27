@@ -1,6 +1,5 @@
 <?php
-
-namespace App\Console\Commands;
+namespace Veneridze\LaravelDelayedReport\Commands;
 
 use Illuminate\Support\Carbon;
 use Illuminate\Console\Command;
