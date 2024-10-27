@@ -61,8 +61,8 @@ class ReportData extends Form
             $report = Report::findOrFail($this->id);
             $this->user = RelationData::from(User::findOrFail($this->user_id));
             $this->docs = MediaData::collect($report->getMedia('result'));
-            $this->label = $report->type::$label;
-            $this->filetype = $report->type::$filetype;
+            $this->label = $report->type::label();
+            $this->filetype = $report->type::filetype();
             $this->description = $report->type::description();
         }
     }
