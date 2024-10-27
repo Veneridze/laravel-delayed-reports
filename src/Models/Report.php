@@ -67,7 +67,7 @@ class Report extends Model implements HasMedia
 
     public function execute(): void
     {
-        $files = $this->getType()::generate();
+        $files = $this->type::generate();
         if(is_string($files)) {
             $files = [$files];
         }
