@@ -143,7 +143,7 @@ class ReportData extends Form
                     [
                         "type" => "hidden",
                         "key" => "type",
-                        "initvalue" => strtolower(basename((new \ReflectionClass($type)->getShortName())))
+                        "initvalue" => strtolower(basename((new \ReflectionClass($type))->getShortName()))
                     ]
                 ]
             ]
